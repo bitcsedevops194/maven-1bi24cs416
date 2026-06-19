@@ -7,12 +7,12 @@ pipeline{
 	stages{
 		stage('Checkout'){
 			steps{
-				git branch:'master' url:'https://github.com/bitcsedevops194/maven-1bi24cs416.git'
+				git branch:'master',url:'https://github.com/bitcsedevops194/maven-1bi24cs416.git'
 				}
 		}
 		stage('Build'){
 			steps{
-				sh 'mvn clean package'
+				sh 'mvn compile'
 				
 				}
 		}
